@@ -9,6 +9,7 @@ import Experience from "./components/Experience.jsx";
 import ProjectsTeaser from "./components/ProjectsTeaser.jsx";
 import Awards from "./components/Awards.jsx";
 import Contact from "./components/Contact.jsx";
+import WorkExperience from "./components/WorkExperience.jsx";
 import Footer from "./components/Footer.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
 
@@ -39,6 +40,7 @@ function Home({ profile }) {
       <Awards awards={profile.awards} />
       <Experience experience={profile.experience} />
       <Certifications certifications={profile.certifications} />
+      <WorkExperience jobs={profile.workExperience} />
       <ProjectsTeaser projects={profile.projects} />
       <Contact contact={profile.contact} apiOffline={profile.__offline} />
     </main>

@@ -1163,3 +1163,62 @@ form.contact-form {
   position: relative;
   z-index: 1;
 }
+
+
+/* ---------- Work experience (career timeline) ---------- */
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-item {
+  padding: 32px 0;
+  border-top: 1px solid var(--border-soft);
+}
+
+.job-list .job-item:last-child {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.job-role {
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+.job-company {
+  font-size: 14.5px;
+  color: var(--text-faint);
+}
+
+.job-period {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.job-bullets {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-dim);
+}
+
+.job-bullets li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.job-bullets li::marker {
+  color: var(--accent);
+}

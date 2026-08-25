@@ -55,6 +55,34 @@
       "Kali Linux"
     ]
   },
+
+  "workExperience": [
+  {
+    "role": "Jr. Penetration Tester Intern",
+    "company": "EncryptEdge Labs",
+    "location": "128 City Road, London, EC1V 2NX, United Kingdom",
+    "startDate": "Aug 2025",
+    "endDate": "Oct - 2025",
+    "bullets": [
+      "Performed vulnerability assessments across internal web applications",
+      "Assisted the security team with incident triage and log analysis",
+      "Documented findings and remediation steps for engineering teams"
+    ]
+  },
+
+  {
+    "role": "Campus Ambassador",
+    "company": "ICT Olympiad",
+    "location": "House - 50, Level- 5 , Lake Circus Kalabagan Dhaka 1209, Bangladesh",
+    "startDate": "July 2025",
+    "endDate": "June 2026",
+    "bullets": [
+      "Promoting the Olympiad and engaging students in tech-related activities",
+      "Coordinating campus-level events, workshops, and registrations",
+      "Serving as a bridge between organizers and participants"
+    ]
+  }
+  ],
   "projects": [
     {
       "slug": "bug-bounty-methodology",
@@ -255,3 +283,4 @@
     "facebook": "https://www.facebook.com/share/1Ei1sHZtCz/"
   }
 }
+

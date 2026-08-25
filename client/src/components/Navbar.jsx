@@ -4,7 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 const SECTION_LINKS = [
   { href: "#about", label: "About" },
   { href: "#certifications", label: "Certifications" },
-  { href: "#work", label: "Work" },
+  { href: "#experience", label: "Experience" },
+  { href: "#work", label: "Findings" },
   { href: "#awards", label: "Awards" },
 ];
 
