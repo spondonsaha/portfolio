@@ -85,6 +85,19 @@
   ],
   "projects": [
     {
+      "slug": "Manual Testing Project",
+      "title": "Demoblaze Registration - Manual & Security Testing",
+      "category": "Functional Testing",
+      "year": "2026",
+      "summary": "Manual QA project testing the Demoblaze registration flow functional, boundary, i18n, and security testing.",
+      "description": "An end-to-end manual QA project covering test planning, test case design, and execution against the Demoblaze e-commerce demo's registration flow. Includes functional, boundary, and internationalization (CJK/emoji) testing, along with security-adjacent checks HTTP method tampering, SQL/XSS injection, race conditions, and rate-limit enforcement each backed by a documented defect. Includes a full Test Plan, Test Strategy, and a dropdown-driven Test Case suite with auto-updating status dashboard.",
+      "tags": ["SQA", "Functional Testing", "Manual Testing"],
+      "image": "/projects/demoblaze_registration_testing_banner.png",
+      "links": [
+        { "label": "Read about the Project", "url": "https://github.com/spondonsaha/Manual-QA-Demoblaze" }
+      ]
+    },
+    {
       "slug": "bug-bounty-methodology",
       "title": "Bug Bounty Methodology",
       "category": "Research",
