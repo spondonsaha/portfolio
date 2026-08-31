@@ -10,10 +10,10 @@
   "photo": "/me.jpeg",
   "about": {
     "paragraphs": [
-      "Hi, I'm Spondon Saha — a passionate cybersecurity student and security researcher currently working with online platforms. I love exploring web vulnerabilities, understanding how systems work, and helping make the internet a safer place.",
-      "I've completed certifications in CEH, Python with Django, and various Cisco Networking modules.",
-      "I'm currently studying at Gono University, and constantly sharpening my skills in ethical hacking, networking, and security research. I believe in continuous learning, sharing knowledge, and making meaningful contributions to the cybersecurity community.",
-      "My journey in cybersecurity began with a deep curiosity about how systems work and how they can be broken. This led me to pursue certifications and hands-on experience in bug bounty programs, where I've successfully identified critical vulnerabilities in various web applications."
+      "I'm Spondon Saha, a Security-focused SQA Engineer combining formal manual and automation testing training with hands-on offensive security experience.",
+      "I work across functional, regression, REST API, GraphQL, Android application, and web application testing with a particular interest in finding the security defects that typical QA workflows miss.",
+      "My certifications include Certified Ethical Hacker (CEH) and Cisco Certified Network Associate (CCNA), alongside ongoing training in Manual & Automation Testing. I'm especially drawn to web application security, API testing (REST & GraphQL), vulnerability assessment, and bug bounty methodology — areas I explore hands-on through platforms like Bugcrowd, YesWeHack, and HackerOne.",
+      "I'm currently pursuing my B.Sc. in Computer Science and Engineering, and I build tools like my QA test case management dashboard to bring more structure and speed to security and QA testing alike."
     ]
   },
   "skills": {
@@ -52,7 +52,9 @@
       "C++",
       "Metasploit",
       "OWASP ZAP",
-      "Kali Linux"
+      "Kali Linux",
+      "Git",
+      "Github"
     ]
   },
 
