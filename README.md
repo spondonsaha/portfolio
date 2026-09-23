@@ -79,22 +79,31 @@ The following files are referenced but not included (add your own):
 If an image is missing, the site degrades gracefully (photo shows a placeholder, cert badges just
 hide the broken image icon) rather than breaking.
 
-## 4. Build for production
+## 4. Deploy on Vercel
 
-```bash
-cd client
-npm run build       # outputs static files to client/dist
-```
+The whole project runs as a **single Vercel project** (frontend + API on the same domain, so the
+client's relative `/api/*` calls work with no CORS setup). The repo root contains:
 
-Serve `client/dist` with any static host (Vercel, Netlify, GitHub Pages, nginx, etc.), and deploy
-`server/` to any Node host (Render, Railway, Fly.io, a VPS, etc.). Set the frontend to call your
-deployed backend's URL instead of `/api` (e.g. via an environment variable and a small fetch
-wrapper), or put both behind the same domain with a reverse proxy so `/api` routes to the backend.
+- `vercel.json` — builds the client (`client/dist`) and routes `/api/*` to a serverless Express
+  function (`api/index.js`).
+- `api/index.js` — Vercel serverless entry that wraps the Express app in `server/app.js`.
+- `package.json` — npm workspaces (`client` + `server`) so one `npm install` gets everything.
 
-**Note on routing:** the site now uses client-side routing (a `/projects` page). Static hosts need
-to be configured with an SPA fallback so that a direct visit to `/projects` (not just clicking a
-link from `/`) serves `index.html` instead of a 404. Most hosts have a one-line config for this —
-e.g. a `_redirects` file with `/* /index.html 200` on Netlify, or a rewrite rule on Vercel/nginx.
+To deploy:
+
+1. Push this repo to GitHub and import it as a **new** Vercel project (project root = repo root,
+   **not** the `client/` folder). Or run `vercel --prod` from the repo root.
+2. Set these env vars in Vercel (Project → Settings → Environment Variables):
+   - `RESEND_API_KEY` — your Resend API key (resend.com/api-keys). Without this, contact
+     messages fall back to local file storage (fine for development, lost on Vercel).
+   - `RESEND_TO` — the inbox that contact-form messages get emailed to.
+   - `RESEND_FROM` — a verified sender, e.g. `onboarding@resend.dev` or `you@yourdomain.com`.
+   - `ADMIN_TOKEN` — optional; protects the `/api/messages` endpoint.
+3. Deploy. Contact messages are emailed to you via Resend (free tier is enough) instead of being
+   written to a file, since Vercel's serverless filesystem is read-only.
+
+Client-side routing is handled in `vercel.json` — unknown routes rewrite to `/index.html`, so a
+direct visit to `/projects` works.
 
 ## 5. Light / dark mode
 
@@ -102,9 +111,13 @@ A toggle in the navbar (sun/moon icon) switches themes and remembers the choice 
 Color values for each theme are CSS variables at the top of `client/src/index.css` — light-mode
 overrides live under the `:root[data-theme="light"]` block.
 
-## 6. Environment variables (optional)
+## 6. Environment variables
 
 - `PORT` — backend port (default `4000`)
+- `RESEND_API_KEY` — Resend API key. When set, contact messages are emailed instead of stored in
+  a file (required on Vercel).
+- `RESEND_TO` — email address that receives contact form messages.
+- `RESEND_FROM` — verified sender address (defaults to `onboarding@resend.dev` if unset).
 - `ADMIN_TOKEN` — set this to protect the `/api/messages` endpoint, e.g.:
   ```bash
   ADMIN_TOKEN=some-long-random-string npm start

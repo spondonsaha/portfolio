@@ -188,6 +188,15 @@
       "hofUrl": "https://www.facebook.com/share/p/19CfVNDY5s/",
       "hofLabel": "Event Reference",
       "image": "/awards/pcb.png"
+    },
+    {
+      "tag": "Bugcrowd",
+      "date": "2026-01-8",
+      "title": "Launchdarkly",
+      "description": "LaunchDarkly Hall of Fame with Rewards - Bugcrowd disclosure, confirmed & fixed.",
+      "hofUrl": "https://bugcrowd.com/engagements/launchdarkly-mbb-og/hall_of_fames",
+      "hofLabel": "Bugcrowd",
+      "image": "/awards/launchdarkly.jpeg"
     }
   ],
 
